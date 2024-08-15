@@ -1,9 +1,8 @@
----
 apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: nginx
-  namespace: foo
+  namespace: argocd
   labels:
     app: nginx
 spec:
@@ -20,4 +19,4 @@ spec:
         - name: nginx
           image: sunkarisomasekhar/nginx
           ports:
-            - containerPort: 80
+            - containerPort: 80  # Corrected comment placement
